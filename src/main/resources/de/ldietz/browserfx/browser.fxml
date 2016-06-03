@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.ldietz.browserfx.BrowserController">
+  
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuItemShowHistory" mnemonicParsing="false" text="Show History" />
+              <MenuItem fx:id="menuItemClose" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="menuItemDelete" mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         
+         <top>
+            <HBox alignment="BASELINE_CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+               <Button fx:id="buttonBack" mnemonicParsing="false" text="&lt;" />
+               <Button fx:id="buttonForward" mnemonicParsing="false" text="&gt;" />
+               <Label fx:id="labelAdress" text="Adresse:" />
+               <TextField fx:id="textfieldUrl" minHeight="25.0" HBox.hgrow="ALWAYS" />
+               <Button fx:id="buttonSearch" minHeight="25.0" mnemonicParsing="false" text="Suchen" />
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </top>
+         
+         <center>
+            <WebView fx:id="webview" BorderPane.alignment="CENTER" />
+         </center>
+         
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+              <Label fx:id="labelLoading" minHeight="25.0">
+                  <HBox.margin>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+               </Label>
+            </HBox>
+         </bottom>
+         
+      </BorderPane>
+   </center>
+   <left>
+      <ListView fx:id="listviewHistory" visible="false" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
