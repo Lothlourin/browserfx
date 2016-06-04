@@ -36,7 +36,7 @@ public class BrowserController {
 	@FXML
 	private void initialize() {
 		engine = webview.getEngine();
-		engine.load("http://www.kba.ivbb.bund.de");
+		engine.load("http://www.google.de");
 		engine.documentProperty().addListener((v, o, n) -> onDocumentChanged(n));
 		
 		WebHistory history = engine.getHistory();
