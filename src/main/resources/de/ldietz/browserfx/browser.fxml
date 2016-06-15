@@ -37,7 +37,7 @@
       </MenuBar>
    </top>
    <center>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <BorderPane>
          
          <top>
             <HBox alignment="BASELINE_CENTER" spacing="5.0" BorderPane.alignment="CENTER">
